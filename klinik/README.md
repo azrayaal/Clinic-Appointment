@@ -1,7 +1,9 @@
 How to install Clinic-Appointment
+```
 1.composer install
 2.php artisan migrate (you can use my sql_dummy for the database)
 3.php artisan serve
+```
 
 How To Use Clinic-Appointment using postman
 Authorization using JWT
@@ -12,19 +14,19 @@ Authorization using JWT
 
 User API
 Register User
-
+```
     URL: http://localhost:8000/api/register
     Method: POST
     Request Body:
-
 {
 "name": "admazra",
 "email": "azrsssa@gmail.com",
 "password": "1234567"
 }
+```
 
 Login User
-
+```
     URL: http://localhost:8000/api/login
     Method: POST
     Request Body:
@@ -33,11 +35,12 @@ Login User
 "email": "test@gmail.com",
 "password": "rahasia"
 }
+```
 
 Get all User
 
 Need Authorization
-
+```
     URL: http://localhost:8000/api/user
     Method: GET
     Request Body:
@@ -52,11 +55,12 @@ Need Authorization
 "updated_at": "2024-05-27T17:55:48.000000Z"
 }
 ]
+```
 
 Remove User
 
 Need Authorization
-
+```
     URL: http://localhost:8000/api/user/:id
     Method: DELETE
     Request Body:
@@ -64,12 +68,13 @@ Need Authorization
 {
 "message": "User has been removed"
 }
+```
 
 Doctor API
 Get All doctors
 
 Need Authorization
-
+```
     URL: http://localhost:8000/api/doctor
     Method: GET
     Request Body:
@@ -81,11 +86,11 @@ Need Authorization
 "specialization": "Dentist"
 }
 ]
-
+```
 Add new Doctor
 
 Need Authorization
-
+```
     URL: http://localhost:8000/api/doctor
     Method: POST
     Request Body:
@@ -94,11 +99,12 @@ Need Authorization
 "name": "SOLEH",
 "specialization": "Dentist"
 }
+```
 
 Get detail Doctor
 
 Need Authorization
-
+```
     URL: http://localhost:8000/api/doctor/:id
     Method: GET
     Request Body:
@@ -109,11 +115,12 @@ Need Authorization
 "specialization": "Dentist"
 "created_at": "2024-200-20"
 }
+```
 
 Update Doctor
 
 Need Authorization
-
+```
     URL: http://localhost:8000/api/doctor/:id
     Method: PUT
     Request Body:
@@ -122,11 +129,12 @@ Need Authorization
 "name": "Satrio",
 "specialization": "Ortopedi"
 }
+```
 
 Remove Doctor
 
 Need Authorization
-
+```
     URL: http://localhost:8000/api/doctor/:id
     Method: DELETE
     Request Body:
@@ -134,10 +142,11 @@ Need Authorization
 {
 message: "Doctor has been removed"
 }
+```
 
 Treatment API
 Get all Treatments
-
+```
 Need Authorization
 
     URL: http://localhost:8000/api/treatment
@@ -152,11 +161,12 @@ Need Authorization
 }
 
 ]
+```
 
 Create new Treatment
 
 Need Authorization
-
+```
     URL: http://localhost:8000/api/treatment
     Method: POST
     Request Body:
@@ -165,11 +175,12 @@ Need Authorization
 "name": "Ortopedi222",
 "description": "Diagnosis, pengobatan, pencegahan, dan rehabilitasi dari gangguan dan cedera pada sistem saraf, ulang, sendi, otot, ligamen, dan tendon."
 }
+```
 
 Get detail Treatment
 
 Need Authorization
-
+```
     URL: http://localhost:8000/api/treatment/:id
     Method: GET
     Request Body:
@@ -179,11 +190,12 @@ Need Authorization
 "name": "Ortopedi222",
 "description": "Diagnosis, pengobatan, pencegahan, dan rehabilitasi dari gangguan dan cedera pada sistem saraf, ulang, sendi, otot, ligamen, dan tendon."
 }
+```
 
 Update Treatment
 
 Need Authorization
-
+```
     URL: http://localhost:8000/api/treatment/:id
     Method: PUT
     Request Body:
@@ -192,11 +204,12 @@ Need Authorization
 "name": "Ortopedi222",
 "description": "Diagnosis, pengobatan, pencegahan, dan rehabilitasi dari gangguan dan cedera pada sistem saraf, ulang, sendi, otot, ligamen, dan tendon."
 }
+```
 
 Delete Treatment
 
 Need Authorization
-
+```
     URL: http://localhost:4000/api/v1/party/:id
     Method: DELETE
     Request Body:
@@ -204,12 +217,13 @@ Need Authorization
 {
 message: "Treatment has been removed"
 }
+```
 
 Appointment API
 Get all Appointment
 
 Need Authorization
-
+```
     URL: http://localhost:8000/api/appointment
     Method: GET
     Request Body:
@@ -246,11 +260,12 @@ Need Authorization
 }
 }
 ]
+```
 
 Make new Appointment
 
 Need Authorization
-
+```
     URL: http://localhost:8000/api/appointment
     Method: POST
     Request Body:
@@ -260,11 +275,12 @@ Need Authorization
 "treatment_id": 1,
 "date": "2024-01-24"
 }
+```
 
 Get detail Appointment
 
 Need Authorization
-
+```
     URL: http://localhost:8000/api/appointment/:id
     Method: GET
     Request Body:
@@ -275,11 +291,12 @@ Need Authorization
 "treatment_id": 1,
 "date": "2024-01-24"
 }
+```
 
 Get detail Appointment by user Login
 
 Need Authorization
-
+```
     URL: http://localhost:8000/api/appointment
     Method: GET
     Request Body:
@@ -290,11 +307,12 @@ Need Authorization
 "treatment_id": 1,
 "date": "2024-01-24"
 }
+```
 
 Update Appointment
 
 Need Authorization
-
+```
     URL: http://localhost:8000/api/appointment/:id
     Method: PUT
     Request Body:
@@ -304,11 +322,12 @@ Need Authorization
 "treatment_id": 1,
 "date": "2024-01-24"
 }
+```
 
 Cancel Appointment
 
 Need Authorization
-
+```
     URL: http://localhost:8000/api/appointment/:id
     Method: DELETE
     Request Body:
@@ -316,3 +335,4 @@ Need Authorization
 {
 message: "Appointment has been removed"
 }
+```
